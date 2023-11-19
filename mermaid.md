@@ -1,4 +1,4 @@
-```mermaid
+``mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -32,5 +32,8 @@ sequenceDiagram
     Note right of browser : The browser sends the input data to the server.
     browser ->> server : POST https://studies.cs.helsinki.fi/exampleapp/new_note
     Note right of browser : The server appends the data to the payload.
-
+    server -->> browser : HTTPS Status code of 302 and a URL Redirect.
+    browser ->> server : GET /exampleapp/notes HTTP/1.1
+    server -->> browser : HTML Document
+    Note right of browser : The browser displays a updated HTML document with uploaded notes.
 ```
