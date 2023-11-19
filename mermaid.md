@@ -8,12 +8,6 @@ sequenceDiagram
     activate server
     server-->>browser: HTML document
     deactivate server
-
-    user ->> browser : input data
-    user ->> browser : click on save button
-    Note right of browser : The browser sends the input data to the server.
-    browser ->> server : POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    Note right of browser : The server appends the data to the payload.
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
@@ -37,4 +31,10 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+    user ->> browser : input data
+    user ->> browser : click on save button
+    Note right of browser : The browser sends the input data to the server.
+    browser ->> server : POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Note right of browser : The server appends the data to the payload.
+
 ```
