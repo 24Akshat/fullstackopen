@@ -27,5 +27,5 @@ sequenceDiagram
     server -->> browser : JSON Array
     deactivate server
 
-    browser -->> browser : Displays the JSON Array
+    browser ->> browser : Displays the JSON Array
 ```
