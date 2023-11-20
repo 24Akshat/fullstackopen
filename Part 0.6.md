@@ -28,10 +28,14 @@ sequenceDiagram
     browser ->> browser : Displays the JSON Array
 
     user ->> browser : Enters the Data
+    activate browser
     user ->> browser : Clicks on SAVE Button
+    deactivate browser
     browser ->> server : POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
     server -->> browser : Responds with Status 201 Created.
+    activate browser
     server -->> browser : JSON array of new Data.
+    deactivate browser
     browser ->> Javascript : The new JSON Array
     Javascript ->> Javascript : Renders the New Data.
 
