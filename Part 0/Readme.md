@@ -1,1 +1,1 @@
-This contains all the exercises of Part 0 of the fullstack course from <a href="https://fullstackopen.com/en/">fullstackopen.com</a>
+This contains all the exercises of Part 0 of the fullstack course from <a href="https://fullstackopen.com/en/" target="_blank">fullstackopen.com</a>
